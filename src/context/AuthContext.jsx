@@ -9,7 +9,14 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+    let baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+    
+    // Ensure the baseURL ends with /api
+    if (baseUrl && !baseUrl.endsWith('/api') && !baseUrl.endsWith('/api/')) {
+        baseUrl = baseUrl.replace(/\/$/, '') + '/api';
+    }
+
+    axios.defaults.baseURL = baseUrl;
     axios.defaults.withCredentials = true;
 
     useEffect(() => {
