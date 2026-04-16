@@ -71,7 +71,7 @@ const Register = () => {
                     <div className="input-group">
                         <label className="input-label">Username</label>
                         <div className="relative">
-                            <User className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" />
+                            <User className="absolute left-3 top-50 y-center text-text-muted w-5 h-5" />
                             <input 
                                 type="text"
                                 name="username"
@@ -87,7 +87,7 @@ const Register = () => {
                     <div className="input-group">
                         <label className="input-label">Email Address</label>
                         <div className="relative">
-                            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" />
+                            <Mail className="absolute left-3 top-50 y-center text-text-muted w-5 h-5" />
                             <input 
                                 type="email"
                                 name="email"
@@ -103,7 +103,7 @@ const Register = () => {
                     <div className="input-group">
                         <label className="input-label">Password</label>
                         <div className="relative">
-                            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" />
+                            <Lock className="absolute left-3 top-50 y-center text-text-muted w-5 h-5" />
                             <input 
                                 type="password"
                                 name="password"
@@ -119,7 +119,7 @@ const Register = () => {
                     <div className="input-group">
                         <label className="input-label">Confirm Password</label>
                         <div className="relative">
-                            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" />
+                            <Lock className="absolute left-3 top-50 y-center text-text-muted w-5 h-5" />
                             <input 
                                 type="password"
                                 name="confirmPassword"

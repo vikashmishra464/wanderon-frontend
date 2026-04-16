@@ -16,7 +16,7 @@ const Dashboard = () => {
     if (!user) return null;
 
     return (
-        <div className="flex-1 flex flex-col items-center p-6 lg:p-12">
+        <div className="flex-1 flex flex-col items-center p-6 lg-p-12">
             <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -36,7 +36,7 @@ const Dashboard = () => {
                     </button>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md-grid-cols-2 lg-grid-cols-3 gap-6">
                     <div className="glass p-6 flex flex-col items-center">
                         <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4">
                             <User className="text-primary w-6 h-6" />
