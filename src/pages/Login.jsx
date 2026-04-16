@@ -9,7 +9,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    
+
     const { login } = useAuth();
     const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ const Login = () => {
 
     return (
         <div className="flex-1 flex items-center justify-center p-6">
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -45,7 +45,7 @@ const Login = () => {
                 </div>
 
                 {error && (
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         className="bg-error/10 border border-error/20 text-error p-4 rounded-xl mb-6 flex items-start gap-3"
@@ -59,9 +59,9 @@ const Login = () => {
                     <div className="input-group">
                         <label className="input-label">Email Address</label>
                         <div className="relative">
-                            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" />
-                            <input 
-                                type="email" 
+                            {/* <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" /> */}
+                            <input
+                                type="email"
                                 className="input-field pl-11"
                                 placeholder="name@example.com"
                                 value={email}
@@ -75,9 +75,8 @@ const Login = () => {
                     <div className="input-group">
                         <label className="input-label">Password</label>
                         <div className="relative">
-                            <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" />
-                            <input 
-                                type="password" 
+                            {/* <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted w-5 h-5" /> */}
+                            <input
                                 className="input-field pl-11"
                                 placeholder="••••••••"
                                 value={password}
@@ -88,8 +87,8 @@ const Login = () => {
                         </div>
                     </div>
 
-                    <button 
-                        type="submit" 
+                    <button
+                        type="submit"
                         className="btn btn-primary"
                         disabled={loading}
                     >
