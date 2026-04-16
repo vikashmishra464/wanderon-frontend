@@ -55,24 +55,3 @@ A robust full-stack authentication system built with modern web technologies. Th
    # Run Frontend (from /frontend)
    npm run dev
    ```
-
-## Deployment
-
-### Backend (Render)
-1. Create a new **Web Service** on Render.
-2. Connect your `wanderon-backend` repository.
-3. Set **Build Command**: `npm install`
-4. Set **Start Command**: `node index.js`
-5. Add **Environment Variables**:
-   - `MONGODB_URI`: Your MongoDB Atlas connection string.
-   - `JWT_SECRET`: A long, random string.
-   - `FRONTEND_URL`: Your Vercel app URL (e.g., `https://your-app.vercel.app`).
-   - `NODE_ENV`: `production`
-
-### Frontend (Vercel)
-1. Create a new **Project** on Vercel.
-2. Connect your `wanderon-frontend` repository.
-3. Vercel will automatically detect Vite.
-4. Add **Environment Variables**:
-   - `VITE_API_BASE_URL`: Your Render backend URL (e.g., `https://your-api.onrender.com/api`).
-5. Click **Deploy**.
