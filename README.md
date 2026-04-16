@@ -1,16 +1,78 @@
-# React + Vite
+# WanderOn - Secure Authentication System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A robust full-stack authentication system built with modern web technologies. This project focuses on security, performance, and a premium user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Secure Registration**: Server-side validation and password hashing using bcrypt.
+- **JWT Authentication**: Stateless session management using JSON Web Tokens.
+- **HttpOnly Cookies**: Prevents XSS attacks by storing tokens in secure, non-accessible cookies.
+- **Premium UI**: Glassmorphic design with smooth transitions using Framer Motion.
+- **Protected Routes**: Middleware-driven route protection on both frontend and backend.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Backend**: Node.js, Express, MongoDB, Mongoose
+- **Frontend**: React, Vite, Framer Motion, Lucide Icons, Vanilla CSS
+- **Security**: JWT, BcryptJS, Helmet, Cookie-parser
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16+)
+- MongoDB (Local or Atlas)
+
+### Setup
+
+1. **Clone and Install**
+   ```bash
+   # Install Backend dependencies
+   cd backend
+   npm install
+
+   # Install Frontend dependencies
+   cd ../frontend
+   npm install
+   ```
+
+2. **Environment Variables**
+   Create a `.env` file in the `backend` directory:
+   ```env
+   PORT=5000
+   MONGODB_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   JWT_EXPIRE=24h
+   COOKIE_EXPIRE=1
+   NODE_ENV=development
+   ```
+
+3. **Run the Application**
+   ```bash
+   # Run Backend (from /backend)
+   node server.js
+
+   # Run Frontend (from /frontend)
+   npm run dev
+   ```
+
+## Deployment
+
+### Backend (Render)
+1. Create a new **Web Service** on Render.
+2. Connect your `wanderon-backend` repository.
+3. Set **Build Command**: `npm install`
+4. Set **Start Command**: `npm start`
+5. Add **Environment Variables**:
+   - `MONGODB_URI`: Your MongoDB Atlas connection string.
+   - `JWT_SECRET`: A long, random string.
+   - `FRONTEND_URL`: Your Vercel app URL (e.g., `https://your-app.vercel.app`).
+   - `NODE_ENV`: `production`
+
+### Frontend (Vercel)
+1. Create a new **Project** on Vercel.
+2. Connect your `wanderon-frontend` repository.
+3. Vercel will automatically detect Vite.
+4. Add **Environment Variables**:
+   - `VITE_API_BASE_URL`: Your Render backend URL (e.g., `https://your-api.onrender.com/api`).
+5. Click **Deploy**.
