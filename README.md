@@ -1,57 +1,67 @@
-# WanderOn - Secure Authentication System
+# WanderOn - Modern Authentication UI
 
-A robust full-stack authentication system built with modern web technologies. This project focuses on security, performance, and a premium user experience.
+The frontend for WanderOn is a sleek, premium authentication interface built with React and Vite. It emphasizes a modern glassmorphic aesthetic with smooth, interactive transitions.
 
-## Features
+## ✨ Highlights
 
-- **Secure Registration**: Server-side validation and password hashing using bcrypt.
-- **JWT Authentication**: Stateless session management using JSON Web Tokens.
-- **HttpOnly Cookies**: Prevents XSS attacks by storing tokens in secure, non-accessible cookies.
-- **Premium UI**: Glassmorphic design with smooth transitions using Framer Motion.
-- **Protected Routes**: Middleware-driven route protection on both frontend and backend.
+- **Premium UI Design**: A stunning glassmorphic interface with vibrant gradients and deep shadows.
+- **Dynamic Animations**: Smooth page transitions and micro-interactions powered by Framer Motion.
+- **Robust State Management**: Centralized authentication state using React's Context API.
+- **Protected Routing**: Intelligent route management to secure user-only pages.
+- **Responsive Layout**: Fully optimized for desktop, tablet, and mobile viewing.
+- **Visual Feedback**: Real-time loading states and error notifications for a seamless experience.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Backend**: Node.js, Express, MongoDB, Mongoose
-- **Frontend**: React, Vite, Framer Motion, Lucide Icons, Vanilla CSS
-- **Security**: JWT, BcryptJS, Helmet, Cookie-parser
+- **Framework**: React 19 (Vite)
+- **Styling**: Vanilla CSS (Modern Design System)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **HTTP Client**: Axios
+- **Routing**: React Router DOM
 
-## Getting Started
+## 📂 Architecture
 
-### Prerequisites
+```text
+frontend/
+├── src/
+│   ├── assets/     # Static images and icons
+│   ├── context/    # AuthContext for global state
+│   ├── pages/      # Full-page components (Login, Register, Dashboard)
+│   ├── App.jsx     # Route configuration
+│   ├── index.css   # Main design system & global styles
+│   └── main.jsx    # Entry point
+└── public/         # Static public assets
+```
 
-- Node.js (v16+)
-- MongoDB (Local or Atlas)
+## ⚙️ Configuration
 
-### Setup
+Create a `.env` file in the root of the `frontend` directory:
 
-1. **Clone and Install**
+```env
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
+## 🏁 Getting Started
+
+1. **Install Dependencies**
    ```bash
-   # Install Backend dependencies
-   cd backend
-   npm install
-
-   # Install Frontend dependencies
-   cd ../frontend
    npm install
    ```
 
-2. **Environment Variables**
-   Create a `.env` file in the `backend` directory:
-   ```env
-   PORT=5000
-   MONGODB_URI=your_mongodb_uri
-   JWT_SECRET=your_jwt_secret
-   JWT_EXPIRE=24h
-   COOKIE_EXPIRE=1
-   NODE_ENV=development
-   ```
-
-3. **Run the Application**
+2. **Run Development Server**
    ```bash
-   # Run Backend (from /backend)
-   node server.js
-
-   # Run Frontend (from /frontend)
    npm run dev
    ```
+
+3. **Build for Production**
+   ```bash
+   npm run build
+   ```
+
+## 🎨 Design Philosophy
+
+WanderOn utilizes a "premium-first" approach. By combining HSL color systems with dynamic glassmorphism, the app provides an immersive experience that feels state-of-the-art. Every interaction is designed to feel fluid and responsive.
+
+---
+*Built for the modern web.*
